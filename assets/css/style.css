@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Latolight';
+    src: url(../fonts/fonts/Lato/Lato-Light.ttf) format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body,html{
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+.container {
+    background: url(../image/im6.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: bottom center; */
+    /* font-family: "Latolight"; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_head{
+    /* background-color: rgba(255, 255, 255,0.1); */
+    /* font-family: "Latolight"; */
+    background:  rgba(114, 137, 145, 0.26);
+    backdrop-filter: blur(7px);
+    border-radius: 15px;
+    border-top: 1px solid rgb(125,125,125);
+    border-left: 1px solid rgb(125,125,125);
+    width: fit-content;
+    height: 50vh;
+    margin: 30px;
+    padding: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.form_body{
+    background-color: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border-bottom: 1px solid rgb(125,125,125);
+    border-right: 1px solid rgb(125,125,125);
+    width: auto;
+    margin: 30px;
+    padding: 20px;
+}
+.form_body form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px 12px 0;
+}
+
+.form_body form .champ{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: calc(100% / 3 - 65px);
+}
+.form_body form .champ label{
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.form_body form .champ input,
+.form_body form .champ textarea , 
+.form_body form .champ select{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid  #ccc;
+    padding-left: 15px;
+    font-size: 11px;
+    font-weight: bolder;
+    border-bottom-width: 2px;
+    transition:all 0.3s ease;
+}
+
+.form_body form .champ input:focus,.form_body form .champ input:hover,
+.form_body form .champ textarea:focus , 
+.form_body form .champ textarea:hover , 
+.form_body form .champ select:focus,
+.form_body form .champ select:hover{
+    color: rgb(20, 61, 54);
+    border-color: rgb(71, 143, 131);
+}
+
+.form_body form .gender-detail .gender-title{
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form_body form .gender-detail .categorie{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.form_body form .gender-detail .categorie label{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-weight: 600;
+}
+.form_body form .gender-detail .categorie .dot{
+    width: 10px;
+    height: 10px;       
+    border-radius: 50%;
+    background: #08080885;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+
+.form_body form input[type="checkbox"]{
+    display: none;
+}
+
+#dot-1:checked ~ .categorie label .dot-1,
+#dot-2:checked ~ .categorie label .dot-2,
+#dot-4:checked ~ .categorie label .dot-4,
+#dot-5:checked ~ .categorie label .dot-5,
+#dot-6:checked ~ .categorie label .dot-6,
+#dot-7:checked ~ .categorie label .dot-7,
+#dot-8:checked ~ .categorie label .dot-8,
+#dot-3:checked ~ .categorie label .dot-3{
+    transition:all 0.3s ease;
+    border-color: #fff;
+    background:  #58af2f;
+}
+
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .form_body form .champ{
+        margin-bottom: 15px;
+        width: calc(100% / 1 - 65px);
+    }
+    .form_body form .gender-detail .categorie{
+        width: 100%;
+    }
+    .form_body form{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 2px;
+        margin-left: 12px;
+    }
+    /* .user-details::-webkit-scrollbar-track{
+        background:#a9b4bb
+    } */
+}
+
+

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Foco";
+    src: url("Foco/FOCO.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "Foco Bold";
+    src: url("Foco/FOCOBOLD.TTF") format("truetype");
+}
+
+.foco{
+    font-family: "Foco";
+}
+
+h1, h2 {
+    font-family: "Foco Bold";
+}
+
+p{
+    max-width: 600px;
+}
