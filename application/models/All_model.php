@@ -4,7 +4,7 @@
     class All_model extends CI_Model {
         
         public function insertDT($nm,$add,$phone,$mail){
-            $request = "insert into person(namelead,addres,phone,mail) values(%s , %s, %s, %s)";
+            $request = "insert into person(namelead,adress,phone,mail) values(%s , %s, %s, %s)";
             $request  = sprintf($request,$this->db->escape($nm),$this->db->escape($add),$this->db->escape($phone),$this->db->escape($mail));
             $status = $this->db->query($request);
             return $status;
